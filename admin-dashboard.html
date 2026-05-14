@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Administrador — Arq Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<div class="dashboard-wrapper">
+
+  <!-- Hamburger -->
+  <button class="hamburger-btn" id="hamburgerBtn"><span></span><span></span><span></span></button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h2>Arq Studio</h2>
+      <span>Administrador</span>
+    </div>
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sidebar-avatar">A</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name" id="sidebar-name">Admin General</div>
+        <div class="sidebar-user-role" id="sidebar-role">admin</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="sidebar-section-label">General</p>
+      <div class="sidebar-link" data-section="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <p class="sidebar-section-label">Gestión</p>
+      <div class="sidebar-link" data-section="proyectos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Proyectos
+      </div>
+      <div class="sidebar-link" data-section="clientes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Clientes
+      </div>
+      <div class="sidebar-link" data-section="empleados">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        Empleados
+      </div>
+      <div class="sidebar-link" data-section="cotizaciones">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Cotizaciones
+      </div>
+      <div class="sidebar-link" data-section="pagos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Pagos
+      </div>
+      <p class="sidebar-section-label">Sistema</p>
+      <div class="sidebar-link" data-section="reportes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Reportes
+      </div>
+      <div class="sidebar-link" data-section="configuracion">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Configuración
+      </div>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-logout" id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Cerrar Sesión
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- DASHBOARD -->
+    <div id="panel-dashboard" class="dash-panel">
+      <div class="page-header">
+        <div class="page-title"><span>Resumen General</span>Dashboard</div>
+        <div class="page-actions">
+          <button class="btn-dash-primary" onclick="openModal('modalNuevoProyecto')">+ Nuevo Proyecto</button>
+        </div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <div class="kpi-value" data-target="14">0</div>
+          <div class="kpi-label">Proyectos Activos</div>
+          <div class="kpi-change">↑ 3 este mes</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div class="kpi-value" data-target="38">0</div>
+          <div class="kpi-label">Clientes Registrados</div>
+          <div class="kpi-change">↑ 5 nuevos</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="kpi-value" data-prefix="$" data-target="842000">0</div>
+          <div class="kpi-label">Ingresos del Mes</div>
+          <div class="kpi-change">↑ 12% vs anterior</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background:rgba(184,92,56,0.1)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="kpi-value" data-prefix="$" data-target="215000">0</div>
+          <div class="kpi-label">Pagos Pendientes</div>
+          <div class="kpi-change negative">3 facturas vencidas</div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-header">
+          <h3 class="dash-card-title">Proyectos Recientes</h3>
+          <button class="btn-dash-secondary" onclick="document.querySelector('[data-section=proyectos]').click()">Ver todos</button>
+        </div>
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Proyecto</th><th>Cliente</th><th>Arquitecto</th><th>Avance</th><th>Estado</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><strong>Casa Residencial Pedregal</strong><br><small class="text-stone">Diseño + Construcción</small></td><td>María González</td><td>Arq. Carlos Reyes</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:72%"></div></div><small>72%</small></div></td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.68rem">Ver</button></td></tr>
+              <tr><td><strong>Torre Corporativa Reforma</strong><br><small class="text-stone">Supervisión</small></td><td>Grp. Inmobiliaria X</td><td>Arq. Laura Méndez</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:45%"></div></div><small>45%</small></div></td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.68rem">Ver</button></td></tr>
+              <tr><td><strong>Loft Industrial Centro</strong><br><small class="text-stone">Interiorismo</small></td><td>Roberto Salas</td><td>Arq. Ana Torres</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:90%"></div></div><small>90%</small></div></td><td><span class="badge-custom badge-review">Revisión</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.68rem">Ver</button></td></tr>
+              <tr><td><strong>Villa Santa Fe</strong><br><small class="text-stone">Diseño Integral</small></td><td>Familia Hernández</td><td>Arq. Carlos Reyes</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:20%"></div></div><small>20%</small></div></td><td><span class="badge-custom badge-pending">En proceso</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.68rem">Ver</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTOS -->
+    <div id="panel-proyectos" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Gestión</span>Proyectos</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="openModal('modalNuevoProyecto')">+ Nuevo Proyecto</button></div>
+      </div>
+      <div class="dash-tabs">
+        <div class="dash-tab active">Todos (14)</div>
+        <div class="dash-tab">Activos (10)</div>
+        <div class="dash-tab">En revisión (3)</div>
+        <div class="dash-tab">Completados (12)</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>#</th><th>Nombre</th><th>Tipo</th><th>Cliente</th><th>Arquitecto</th><th>Avance</th><th>Estado</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="text-stone">001</td><td><strong>Casa Residencial Pedregal</strong></td><td>Residencial</td><td>María González</td><td>Arq. C. Reyes</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:70px"><div class="progress-bar-custom" style="width:72%"></div></div><small>72%</small></div></td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td class="text-stone">002</td><td><strong>Torre Corporativa Reforma</strong></td><td>Comercial</td><td>Grp. Inmobiliaria X</td><td>Arq. L. Méndez</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:70px"><div class="progress-bar-custom" style="width:45%"></div></div><small>45%</small></div></td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td class="text-stone">003</td><td><strong>Loft Industrial Centro</strong></td><td>Interiorismo</td><td>Roberto Salas</td><td>Arq. A. Torres</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:70px"><div class="progress-bar-custom" style="width:90%"></div></div><small>90%</small></div></td><td><span class="badge-custom badge-review">Revisión</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td class="text-stone">004</td><td><strong>Villa Santa Fe</strong></td><td>Residencial</td><td>Familia Hernández</td><td>Arq. C. Reyes</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:70px"><div class="progress-bar-custom" style="width:20%"></div></div><small>20%</small></div></td><td><span class="badge-custom badge-pending">En proceso</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td class="text-stone">005</td><td><strong>Centro Comercial Polanco</strong></td><td>Comercial</td><td>Dev Polanco SA</td><td>Arq. L. Méndez</td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:70px"><div class="progress-bar-custom" style="width:100%"></div></div><small>100%</small></div></td><td><span class="badge-custom badge-complete">Completado</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Ver</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLIENTES -->
+    <div id="panel-clientes" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Directorio</span>Clientes</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="openModal('modalNuevoCliente')">+ Nuevo Cliente</button></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Proyectos</th><th>Saldo Pendiente</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">M</div><strong>María González</strong></div></td><td>maria@email.com</td><td>(81) 1111-2222</td><td><span class="badge-custom badge-active">1 activo</span></td><td>$85,000</td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Ver</button></td></tr>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">R</div><strong>Roberto Salas</strong></div></td><td>rsalas@corp.com</td><td>(81) 3333-4444</td><td><span class="badge-custom badge-review">1 revisión</span></td><td>$0</td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Ver</button></td></tr>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">G</div><strong>Grp. Inmobiliaria X</strong></div></td><td>contacto@inmx.com</td><td>(81) 5555-6666</td><td><span class="badge-custom badge-active">2 activos</span></td><td>$130,000</td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Ver</button></td></tr>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">F</div><strong>Familia Hernández</strong></div></td><td>hernandez@gmail.com</td><td>(81) 7777-8888</td><td><span class="badge-custom badge-pending">1 proceso</span></td><td>$0</td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Ver</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMPLEADOS -->
+    <div id="panel-empleados" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Equipo</span>Empleados</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Módulo disponible próximamente')">+ Nuevo Empleado</button></div>
+      </div>
+      <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi-card"><div class="kpi-value" data-target="8">0</div><div class="kpi-label">Arquitectos</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-target="3">0</div><div class="kpi-label">Administrativos</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-target="11">0</div><div class="kpi-label">Total</div></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Nombre</th><th>Puesto</th><th>Email</th><th>Proyectos</th><th>Estado</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">C</div><strong>Arq. Carlos Reyes</strong></div></td><td>Arquitecto Sr.</td><td>c.reyes@arqstudio.mx</td><td>3</td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">L</div><strong>Arq. Laura Méndez</strong></div></td><td>Arquitecta Sr.</td><td>l.mendez@arqstudio.mx</td><td>2</td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+              <tr><td><div class="flex items-center g-2"><div class="user-avatar">A</div><strong>Arq. Ana Torres</strong></div></td><td>Arquitecta Jr.</td><td>a.torres@arqstudio.mx</td><td>1</td><td><span class="badge-custom badge-active">Activo</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">Editar</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- COTIZACIONES -->
+    <div id="panel-cotizaciones" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Documentos</span>Cotizaciones</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Módulo de cotización próximamente')">+ Nueva Cotización</button></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Folio</th><th>Cliente</th><th>Proyecto</th><th>Monto Total</th><th>Fecha</th><th>Estado</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="text-gold">COT-2025-001</td><td>María González</td><td>Casa Pedregal</td><td><strong>$1,250,000</strong></td><td>15 mar 2025</td><td><span class="badge-custom badge-active">Aprobada</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">PDF</button></td></tr>
+              <tr><td class="text-gold">COT-2025-002</td><td>Grp. Inmobiliaria X</td><td>Torre Corporativa</td><td><strong>$8,400,000</strong></td><td>10 ene 2025</td><td><span class="badge-custom badge-active">Aprobada</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">PDF</button></td></tr>
+              <tr><td class="text-gold">COT-2025-003</td><td>Familia Hernández</td><td>Villa Santa Fe</td><td><strong>$2,100,000</strong></td><td>2 may 2025</td><td><span class="badge-custom badge-pending">En revisión</span></td><td><button class="btn-dash-secondary" style="padding:5px 12px;font-size:.67rem">PDF</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGOS -->
+    <div id="panel-pagos" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Finanzas</span>Pagos</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Pago registrado')">+ Registrar Pago</button></div>
+      </div>
+      <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi-card"><div class="kpi-value" data-prefix="$" data-target="842000">0</div><div class="kpi-label">Cobrado este mes</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-prefix="$" data-target="215000">0</div><div class="kpi-label">Por cobrar</div><div class="kpi-change negative">↑ Urgente</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-prefix="$" data-target="4280000">0</div><div class="kpi-label">En contratos activos</div></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Fecha</th><th>Cliente</th><th>Proyecto</th><th>Concepto</th><th>Monto</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>01 jun 2025</td><td>María González</td><td>Casa Pedregal</td><td>Estimación 2</td><td class="text-gold"><strong>$200,000</strong></td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>28 may 2025</td><td>Grp. Inmobiliaria X</td><td>Torre Corporativa</td><td>Estimación 2</td><td class="text-gold"><strong>$642,000</strong></td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>15 jun 2025</td><td>María González</td><td>Casa Pedregal</td><td>Anticipo 30%</td><td class="text-gold"><strong>$85,000</strong></td><td><span class="badge-custom badge-pending">Pendiente</span></td></tr>
+              <tr><td>20 jun 2025</td><td>Grp. Inmobiliaria X</td><td>Torre Corporativa</td><td>Estimación 3</td><td class="text-gold"><strong>$130,000</strong></td><td><span class="badge-custom badge-review">Vencido</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- REPORTES -->
+    <div id="panel-reportes" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Análisis</span>Reportes</div>
+        <div class="page-actions">
+          <button class="btn-dash-secondary" onclick="showToast('Excel generado')">Exportar Excel</button>
+          <button class="btn-dash-primary" onclick="showToast('PDF generado')">Generar PDF</button>
+        </div>
+      </div>
+      <div class="alert-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Los reportes con gráficas se activarán al conectar la base de datos.</div>
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-value" data-prefix="$" data-target="4980000">0</div><div class="kpi-label">Ingresos Anuales 2025</div><div class="kpi-change">↑ 18% vs 2024</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-target="26">0</div><div class="kpi-label">Proyectos en 2025</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-target="98" data-suffix="%">0</div><div class="kpi-label">Satisfacción</div></div>
+        <div class="kpi-card"><div class="kpi-value" data-prefix="$" data-target="192000">0</div><div class="kpi-label">Ticket Promedio</div></div>
+      </div>
+    </div>
+
+    <!-- CONFIGURACION -->
+    <div id="panel-configuracion" class="dash-panel" style="display:none">
+      <div class="page-header"><div class="page-title"><span>Sistema</span>Configuración</div></div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3 class="dash-card-title">Datos del Despacho</h3></div>
+            <div class="dash-card-body" style="padding:1.75rem">
+              <div class="form-row cols-2 mb-3">
+                <div class="dash-form-group"><label class="dash-form-label">Nombre</label><input class="dash-form-control" value="Arq Studio"/></div>
+                <div class="dash-form-group"><label class="dash-form-label">RFC</label><input class="dash-form-control" value="ARS010101AAA"/></div>
+              </div>
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Dirección</label><input class="dash-form-control" value="Monterrey, Nuevo León, México"/></div>
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Teléfono</label><input class="dash-form-control" value="+52 (81) 1234-5678"/></div>
+              <button class="btn-dash-primary" onclick="showToast('Configuración guardada')">Guardar Cambios</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3 class="dash-card-title">Usuarios del Sistema</h3></div>
+            <div class="dash-card-body" style="padding:1.75rem">
+              <table class="custom-table">
+                <thead><tr><th>Usuario</th><th>Rol</th><th>Estado</th></tr></thead>
+                <tbody>
+                  <tr><td>admin</td><td>Administrador</td><td><span class="badge-custom badge-active">Activo</span></td></tr>
+                  <tr><td>arquitecto</td><td>Arquitecto</td><td><span class="badge-custom badge-active">Activo</span></td></tr>
+                  <tr><td>cliente</td><td>Cliente</td><td><span class="badge-custom badge-active">Activo</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL: Nuevo Proyecto -->
+<div class="modal fade" id="modalNuevoProyecto" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="border:none;border-radius:0">
+      <div class="modal-header" style="border-bottom:1px solid var(--border);padding:1.5rem 2rem">
+        <h5 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300">Nuevo Proyecto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="padding:2rem">
+        <div class="form-row cols-2 mb-3">
+          <div class="dash-form-group"><label class="dash-form-label">Nombre del Proyecto</label><input class="dash-form-control" placeholder="Ej. Casa Residencial Norte"/></div>
+          <div class="dash-form-group"><label class="dash-form-label">Tipo</label><select class="dash-form-control"><option>Residencial</option><option>Comercial</option><option>Interiorismo</option><option>Industrial</option></select></div>
+        </div>
+        <div class="form-row cols-2 mb-3">
+          <div class="dash-form-group"><label class="dash-form-label">Cliente</label><select class="dash-form-control"><option>María González</option><option>Roberto Salas</option><option>Grp. Inmobiliaria X</option></select></div>
+          <div class="dash-form-group"><label class="dash-form-label">Arquitecto</label><select class="dash-form-control"><option>Arq. Carlos Reyes</option><option>Arq. Laura Méndez</option><option>Arq. Ana Torres</option></select></div>
+        </div>
+        <div class="form-row cols-2 mb-3">
+          <div class="dash-form-group"><label class="dash-form-label">Fecha Inicio</label><input type="date" class="dash-form-control"/></div>
+          <div class="dash-form-group"><label class="dash-form-label">Fecha Entrega Estimada</label><input type="date" class="dash-form-control"/></div>
+        </div>
+        <div class="dash-form-group"><label class="dash-form-label">Descripción</label><textarea class="dash-form-control" rows="3" placeholder="Descripción del proyecto..."></textarea></div>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid var(--border);padding:1.25rem 2rem;gap:.75rem">
+        <button class="btn-dash-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn-dash-primary" data-bs-dismiss="modal" onclick="showToast('Proyecto creado exitosamente')">Crear Proyecto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Nuevo Cliente -->
+<div class="modal fade" id="modalNuevoCliente" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content" style="border:none;border-radius:0">
+      <div class="modal-header" style="border-bottom:1px solid var(--border);padding:1.5rem 2rem">
+        <h5 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300">Nuevo Cliente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="padding:2rem">
+        <div class="form-row cols-2 mb-3">
+          <div class="dash-form-group"><label class="dash-form-label">Nombre</label><input class="dash-form-control" placeholder="Nombre o empresa"/></div>
+          <div class="dash-form-group"><label class="dash-form-label">RFC</label><input class="dash-form-control" placeholder="Opcional"/></div>
+        </div>
+        <div class="dash-form-group mb-3"><label class="dash-form-label">Email</label><input type="email" class="dash-form-control" placeholder="correo@ejemplo.com"/></div>
+        <div class="form-row cols-2 mb-3">
+          <div class="dash-form-group"><label class="dash-form-label">Teléfono</label><input class="dash-form-control" placeholder="(81) 0000-0000"/></div>
+          <div class="dash-form-group"><label class="dash-form-label">Ciudad</label><input class="dash-form-control" placeholder="Monterrey"/></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top:1px solid var(--border);padding:1.25rem 2rem;gap:.75rem">
+        <button class="btn-dash-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn-dash-primary" data-bs-dismiss="modal" onclick="showToast('Cliente registrado')">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
