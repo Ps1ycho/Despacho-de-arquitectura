@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Despacho de Arquitectura — Diseño & Planeación</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar-custom">
+    <a href="index.html" class="navbar-brand-custom">Arq Studio</a>
+    <ul class="nav-links">
+      <li><a href="#servicios" class="active">Servicios</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="btn-nav-login" onclick="window.location.href='login.html'">
+      Acceder
+    </button>
+  </nav>
+
+  <!-- ══ HERO ════════════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container-fluid">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Despacho de Arquitectura</p>
+        <h1>Diseñamos<br><em>espacios</em><br>que perduran</h1>
+        <p class="hero-desc">
+          Transformamos visiones en obras extraordinarias. Diseño arquitectónico, 
+          planeación integral y supervisión de proyectos con excelencia y precisión.
+        </p>
+        <div class="hero-cta">
+          <a href="#portafolio" class="btn-primary-custom">Ver Portafolio</a>
+          <a href="#contacto" class="btn-outline-custom">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Explorar
+    </div>
+  </section>
+
+  <!-- ══ STATS BAR ════════════════════════════════════════════ -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-number" data-target="120" data-suffix="+">0+</div>
+      <div class="stat-label">Proyectos Completados</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="15" data-suffix=" años">0 años</div>
+      <div class="stat-label">De Experiencia</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+      <div class="stat-label">Clientes Satisfechos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="12" data-suffix="">0</div>
+      <div class="stat-label">Premios de Diseño</div>
+    </div>
+  </div>
+
+  <!-- ══ SERVICIOS ════════════════════════════════════════════ -->
+  <section class="section" id="servicios">
+    <div class="section-header">
+      <p class="section-eyebrow">Lo que ofrecemos</p>
+      <h2 class="section-title">Nuestros<br><em>Servicios</em></h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-number">01</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <h3 class="service-title">Diseño Arquitectónico</h3>
+        <p class="service-desc">Creamos planos y conceptos que combinan estética, funcionalidad y viabilidad constructiva, adaptados a cada cliente y contexto.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">02</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <h3 class="service-title">Planeación Integral</h3>
+        <p class="service-desc">Gestión completa del proyecto desde la concepción hasta la entrega: cronogramas, presupuestos, permisos y coordinación de especialistas.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">03</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/>
+        </svg>
+        <h3 class="service-title">Supervisión de Obra</h3>
+        <p class="service-desc">Control técnico en campo para asegurar la calidad constructiva, el apego al proyecto ejecutivo y el cumplimiento de plazos y presupuesto.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">04</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 8v4l3 3"/>
+        </svg>
+        <h3 class="service-title">Gestión de Proyectos</h3>
+        <p class="service-desc">Coordinación eficiente de todos los actores: clientes, contratistas y proveedores para entregar resultados en tiempo y forma.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">05</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        </svg>
+        <h3 class="service-title">Interiorismo</h3>
+        <p class="service-desc">Diseño de espacios interiores con materiales de alta calidad que reflejan la identidad y el estilo de vida de cada cliente.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-number">06</span>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <h3 class="service-title">Trámites y Permisos</h3>
+        <p class="service-desc">Gestión de licencias de construcción, dictámenes y trámites ante autoridades para que el proyecto avance sin contratiempos legales.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PORTAFOLIO ═══════════════════════════════════════════ -->
+  <section class="section portfolio-section" id="portafolio">
+    <div class="section-header">
+      <p class="section-eyebrow">Nuestro trabajo</p>
+      <h2 class="section-title">Proyectos<br><em>Destacados</em></h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=80" alt="Casa Moderna" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <h4>Casa Residencial Pedregal</h4>
+            <span>Diseño + Construcción · 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Oficinas" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <h4>Torre Corporativa Reforma</h4>
+            <span>Planeación + Supervisión · 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80" alt="Interior" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <h4>Loft Industrial Centro</h4>
+            <span>Interiorismo · 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Residencia" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <h4>Villa Santa Fe</h4>
+            <span>Diseño Integral · 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1547638375-ebf04735d792?w=600&q=80" alt="Comercial" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <div class="portfolio-info">
+            <h4>Centro Comercial Polanco</h4>
+            <span>Supervisión · 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROCESO ══════════════════════════════════════════════ -->
+  <section class="section" id="proceso">
+    <div class="section-header text-center">
+      <p class="section-eyebrow" style="justify-content: center;">Cómo trabajamos</p>
+      <h2 class="section-title">Nuestro<br><em>Proceso</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-dot">1</div>
+        <h4 class="step-title">Consulta Inicial</h4>
+        <p class="step-desc">Escuchamos tus necesidades, analizamos el sitio y definimos los alcances, objetivos y presupuesto del proyecto.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">2</div>
+        <h4 class="step-title">Diseño y Cotización</h4>
+        <p class="step-desc">Elaboramos el anteproyecto, ajustamos el diseño según tu retroalimentación y presentamos una cotización detallada.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">3</div>
+        <h4 class="step-title">Planeación Ejecutiva</h4>
+        <p class="step-desc">Desarrollamos el proyecto ejecutivo completo: planos, especificaciones técnicas, programa de obra y tramitación de permisos.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">4</div>
+        <h4 class="step-title">Construcción y Entrega</h4>
+        <p class="step-desc">Supervisamos cada etapa de la obra para garantizar calidad, cumplimiento de tiempo y entrega del proyecto terminado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA SECTION ══════════════════════════════════════════ -->
+  <section style="background: var(--charcoal); padding: 7rem 4rem; text-align: center;" id="contacto">
+    <p style="font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem;">
+      ¿Listo para comenzar?
+    </p>
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,6vw,5rem); color:var(--cream); margin-bottom:1.5rem; font-weight:300; line-height:1.1;">
+      Convierte tu visión<br><em style="color:var(--gold-light); font-style:italic;">en realidad</em>
+    </h2>
+    <p style="color:rgba(245,240,232,0.6); font-size:1rem; max-width:480px; margin:0 auto 3rem; line-height:1.7;">
+      Contáctanos hoy y agenda una consulta gratuita con nuestro equipo de arquitectos.
+    </p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="login.html" class="btn-primary-custom">Acceder a la Plataforma</a>
+      <a href="mailto:contacto@arqstudio.mx" class="btn-outline-custom" style="color:var(--cream);">
+        contacto@arqstudio.mx
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Arq Studio</h3>
+        <p>Despacho de arquitectura dedicado a transformar espacios en experiencias extraordinarias con diseño, planeación y supervisión de excelencia.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#">Diseño Arquitectónico</a></li>
+          <li><a href="#">Planeación Integral</a></li>
+          <li><a href="#">Supervisión de Obra</a></li>
+          <li><a href="#">Interiorismo</a></li>
+          <li><a href="#">Trámites y Permisos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Portafolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Carreras</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="#">contacto@arqstudio.mx</a></li>
+          <li><a href="#">+52 (81) 1234-5678</a></li>
+          <li><a href="#">Monterrey, N.L. México</a></li>
+          <li style="margin-top:1.5rem"><a href="login.html" style="color:var(--gold);">→ Acceder a la plataforma</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Arq Studio. Todos los derechos reservados.</span>
+      <span>Diseño con precisión y propósito.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
