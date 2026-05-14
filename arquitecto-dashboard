@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Arquitecto — Arq Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<div class="dashboard-wrapper">
+  <button class="hamburger-btn" id="hamburgerBtn"><span></span><span></span><span></span></button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo"><h2>Arq Studio</h2><span>Arquitecto</span></div>
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sidebar-avatar">C</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name" id="sidebar-name">Arq. Carlos Reyes</div>
+        <div class="sidebar-user-role" id="sidebar-role">arquitecto</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="sidebar-section-label">Mi Trabajo</p>
+      <div class="sidebar-link" data-section="mis-proyectos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Mis Proyectos
+      </div>
+      <div class="sidebar-link" data-section="avances">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Registrar Avance
+      </div>
+      <div class="sidebar-link" data-section="bitacora">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Bitácora de Obra
+      </div>
+      <div class="sidebar-link" data-section="evidencias">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Evidencia Fotográfica
+      </div>
+      <p class="sidebar-section-label">Información</p>
+      <div class="sidebar-link" data-section="clientes-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Mis Clientes
+      </div>
+      <div class="sidebar-link" data-section="perfil">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        Mi Perfil
+      </div>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-logout" id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Cerrar Sesión
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- MIS PROYECTOS -->
+    <div id="panel-mis-proyectos" class="dash-panel">
+      <div class="page-header"><div class="page-title"><span>Vista General</span>Mis Proyectos</div></div>
+      <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi-card"><div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div class="kpi-value" data-target="3">0</div><div class="kpi-label">Proyectos Asignados</div></div>
+        <div class="kpi-card"><div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="kpi-value" data-target="62" data-suffix="%">0</div><div class="kpi-label">Avance Promedio</div></div>
+        <div class="kpi-card"><div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="kpi-value" data-target="8">0</div><div class="kpi-label">Bitácoras esta semana</div></div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="dash-card h-100">
+            <div style="height:150px;overflow:hidden"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=70" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div style="padding:1.5rem">
+              <div class="flex justify-between items-center mb-2"><span class="badge-custom badge-active">Activo</span><small class="text-stone">Mar 2025</small></div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.4rem">Casa Residencial Pedregal</h4>
+              <p style="font-size:.82rem;color:var(--stone);margin-bottom:1rem">Cliente: María González</p>
+              <div class="flex items-center g-2 mb-2"><div class="progress-custom flex-grow-1"><div class="progress-bar-custom" style="width:72%"></div></div><small>72%</small></div>
+              <p style="font-size:.78rem;color:var(--stone);margin-bottom:1rem">Etapa: <strong style="color:var(--charcoal)">Estructura</strong></p>
+              <button class="btn-dash-primary" style="width:100%;justify-content:center" onclick="document.querySelector('[data-section=avances]').click()">Registrar Avance</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="dash-card h-100">
+            <div style="height:150px;overflow:hidden"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=70" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div style="padding:1.5rem">
+              <div class="flex justify-between items-center mb-2"><span class="badge-custom badge-pending">En proceso</span><small class="text-stone">May 2025</small></div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.4rem">Villa Santa Fe</h4>
+              <p style="font-size:.82rem;color:var(--stone);margin-bottom:1rem">Cliente: Familia Hernández</p>
+              <div class="flex items-center g-2 mb-2"><div class="progress-custom flex-grow-1"><div class="progress-bar-custom" style="width:20%"></div></div><small>20%</small></div>
+              <p style="font-size:.78rem;color:var(--stone);margin-bottom:1rem">Etapa: <strong style="color:var(--charcoal)">Cimentación</strong></p>
+              <button class="btn-dash-primary" style="width:100%;justify-content:center" onclick="document.querySelector('[data-section=avances]').click()">Registrar Avance</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="dash-card h-100">
+            <div style="height:150px;overflow:hidden"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=70" style="width:100%;height:100%;object-fit:cover"/></div>
+            <div style="padding:1.5rem">
+              <div class="flex justify-between items-center mb-2"><span class="badge-custom badge-review">Revisión</span><small class="text-stone">Nov 2024</small></div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.4rem">Loft Industrial Centro</h4>
+              <p style="font-size:.82rem;color:var(--stone);margin-bottom:1rem">Cliente: Roberto Salas</p>
+              <div class="flex items-center g-2 mb-2"><div class="progress-custom flex-grow-1"><div class="progress-bar-custom" style="width:90%"></div></div><small>90%</small></div>
+              <p style="font-size:.78rem;color:var(--stone);margin-bottom:1rem">Etapa: <strong style="color:var(--charcoal)">Acabados Finales</strong></p>
+              <button class="btn-dash-secondary" style="width:100%;justify-content:center">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVANCES -->
+    <div id="panel-avances" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Actualización</span>Registrar Avance</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Avance guardado correctamente')">Guardar Avance</button></div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-8">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3 class="dash-card-title">Nuevo Registro</h3></div>
+            <div class="dash-card-body" style="padding:2rem">
+              <div class="form-row cols-2 mb-3">
+                <div class="dash-form-group"><label class="dash-form-label">Proyecto</label><select class="dash-form-control"><option>Casa Residencial Pedregal</option><option>Villa Santa Fe</option><option>Loft Industrial Centro</option></select></div>
+                <div class="dash-form-group"><label class="dash-form-label">Etapa</label><select class="dash-form-control"><option>Preliminares</option><option>Cimentación</option><option selected>Estructura</option><option>Albañilería</option><option>Instalaciones</option><option>Acabados</option><option>Acabados Finales</option></select></div>
+              </div>
+              <div class="form-row cols-2 mb-3">
+                <div class="dash-form-group"><label class="dash-form-label">Fecha de visita</label><input type="date" class="dash-form-control"/></div>
+                <div class="dash-form-group"><label class="dash-form-label">% Avance Total</label><input type="number" class="dash-form-control" value="72" min="0" max="100"/></div>
+              </div>
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Actividades realizadas</label><textarea class="dash-form-control" rows="4" placeholder="Describe las actividades de esta visita..."></textarea></div>
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Observaciones / Incidencias</label><textarea class="dash-form-control" rows="3" placeholder="Cualquier situación especial encontrada..."></textarea></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3 class="dash-card-title">Etapas del Proyecto</h3></div>
+            <div class="dash-card-body" style="padding:1.5rem;font-size:.82rem">
+              <div class="flex justify-between mb-2"><span>Preliminares</span><span class="badge-custom badge-active" style="padding:2px 8px">✓</span></div>
+              <div class="flex justify-between mb-2"><span>Cimentación</span><span class="badge-custom badge-active" style="padding:2px 8px">✓</span></div>
+              <div class="flex justify-between mb-2"><span>Estructura</span><span class="badge-custom badge-pending" style="padding:2px 8px">En curso</span></div>
+              <div class="flex justify-between mb-2"><span>Albañilería</span><span class="badge-custom badge-complete" style="padding:2px 8px">—</span></div>
+              <div class="flex justify-between mb-2"><span>Instalaciones</span><span class="badge-custom badge-complete" style="padding:2px 8px">—</span></div>
+              <div class="flex justify-between mb-2"><span>Acabados</span><span class="badge-custom badge-complete" style="padding:2px 8px">—</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BITÁCORA -->
+    <div id="panel-bitacora" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Historial</span>Bitácora de Obra</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Nota agregada a la bitácora')">+ Agregar Nota</button></div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-body" style="padding:1.75rem">
+          <div class="timeline">
+            <div class="timeline-item"><div class="timeline-dot filled"></div><div class="timeline-date">Hoy · Casa Pedregal · Estructura</div><div class="timeline-content"><strong>Colado de losa nivel 1.</strong> Se realizó sin incidencias. Concreto f'c=250 kg/cm². Presencia de residente e inspector.</div></div>
+            <div class="timeline-item"><div class="timeline-dot filled"></div><div class="timeline-date">28 may · Casa Pedregal · Estructura</div><div class="timeline-content"><strong>Habilitado de columnas ejes A-C.</strong> Se observó humedad en trabe secundaria, notificado al cliente.</div></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">25 may · Villa Santa Fe · Cimentación</div><div class="timeline-content"><strong>Inicio de cimentación.</strong> Excavaciones para zapatas. Terreno con buena resistencia.</div></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">20 may · Loft Industrial · Acabados Finales</div><div class="timeline-content"><strong>Revisión final.</strong> Relación de detalles entregada al contratista para corrección.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVIDENCIAS -->
+    <div id="panel-evidencias" class="dash-panel" style="display:none">
+      <div class="page-header">
+        <div class="page-title"><span>Documentación Visual</span>Evidencia Fotográfica</div>
+        <div class="page-actions"><button class="btn-dash-primary" onclick="showToast('Módulo de carga disponible al conectar servidor')">↑ Subir Fotos</button></div>
+      </div>
+      <div class="alert-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>La carga de imágenes se habilitará al conectar el almacenamiento en la nube.</div>
+      <div class="row g-2 mt-1">
+        <div class="col-6 col-md-3"><div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=70" style="width:100%;height:100%;object-fit:cover"/></div><p style="font-size:.72rem;color:var(--stone);margin-top:.4rem">Casa Pedregal · Estructura · 01 jun</p></div>
+        <div class="col-6 col-md-3"><div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&q=70" style="width:100%;height:100%;object-fit:cover"/></div><p style="font-size:.72rem;color:var(--stone);margin-top:.4rem">Casa Pedregal · Estructura · 28 may</p></div>
+        <div class="col-6 col-md-3"><div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400&q=70" style="width:100%;height:100%;object-fit:cover"/></div><p style="font-size:.72rem;color:var(--stone);margin-top:.4rem">Villa Santa Fe · Cimentación · 25 may</p></div>
+        <div class="col-6 col-md-3"><div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&q=70" style="width:100%;height:100%;object-fit:cover"/></div><p style="font-size:.72rem;color:var(--stone);margin-top:.4rem">Loft Industrial · Acabados · 20 may</p></div>
+      </div>
+    </div>
+
+    <!-- CLIENTES INFO -->
+    <div id="panel-clientes-info" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Directorio</span>Mis Clientes</div>
+      <div class="row g-3">
+        <div class="col-md-6"><div class="dash-card"><div style="height:100px;overflow:hidden"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=60" style="width:100%;height:100%;object-fit:cover"/></div><div style="padding:1.5rem"><p class="text-stone" style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase">Casa Residencial Pedregal</p><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.75rem">María González</h4><p style="font-size:.85rem;color:var(--stone)">📧 maria@email.com<br>📱 (81) 1111-2222</p></div></div></div>
+        <div class="col-md-6"><div class="dash-card"><div style="height:100px;overflow:hidden"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=60" style="width:100%;height:100%;object-fit:cover"/></div><div style="padding:1.5rem"><p class="text-stone" style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase">Villa Santa Fe</p><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.75rem">Familia Hernández</h4><p style="font-size:.85rem;color:var(--stone)">📧 hernandez@gmail.com<br>📱 (81) 7777-8888</p></div></div></div>
+      </div>
+    </div>
+
+    <!-- PERFIL -->
+    <div id="panel-perfil" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Cuenta</span>Mi Perfil</div>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="dash-card" style="padding:2rem;text-align:center"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--terracotta));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--charcoal)">C</div><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem">Arq. Carlos Reyes</h4><p style="font-size:.72rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase">Arquitecto Senior</p></div></div>
+        <div class="col-md-8"><div class="dash-card"><div class="dash-card-header"><h3 class="dash-card-title">Editar Información</h3></div><div class="dash-card-body" style="padding:2rem"><div class="form-row cols-2 mb-3"><div class="dash-form-group"><label class="dash-form-label">Nombre</label><input class="dash-form-control" value="Carlos Reyes Garza"/></div><div class="dash-form-group"><label class="dash-form-label">Cédula Profesional</label><input class="dash-form-control" value="12345678"/></div></div><div class="dash-form-group mb-3"><label class="dash-form-label">Email</label><input class="dash-form-control" value="c.reyes@arqstudio.mx"/></div><div class="dash-form-group mb-3"><label class="dash-form-label">Teléfono</label><input class="dash-form-control" value="(81) 2222-3333"/></div><button class="btn-dash-primary" onclick="showToast('Perfil actualizado')">Guardar Cambios</button></div></div></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
