@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portal — Arq Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<div class="dashboard-wrapper">
+  <button class="hamburger-btn" id="hamburgerBtn"><span></span><span></span><span></span></button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo"><h2>Arq Studio</h2><span>Portal Cliente</span></div>
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sidebar-avatar">M</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name" id="sidebar-name">María González</div>
+        <div class="sidebar-user-role" id="sidebar-role">cliente</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <p class="sidebar-section-label">Mi Proyecto</p>
+      <div class="sidebar-link" data-section="resumen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Mi Resumen
+      </div>
+      <div class="sidebar-link" data-section="avance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Avance de Obra
+      </div>
+      <div class="sidebar-link" data-section="cotizacion">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Mi Cotización
+      </div>
+      <div class="sidebar-link" data-section="pagos-cliente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Mis Pagos
+      </div>
+      <div class="sidebar-link" data-section="notificaciones">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notificaciones
+        <span style="margin-left:auto;background:var(--terracotta);color:white;border-radius:10px;padding:1px 7px;font-size:.65rem">3</span>
+      </div>
+      <p class="sidebar-section-label">Contacto</p>
+      <div class="sidebar-link" data-section="contacto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Contactar Despacho
+      </div>
+      <div class="sidebar-link" data-section="perfil-cli">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        Mi Perfil
+      </div>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-logout" id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Cerrar Sesión
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- RESUMEN -->
+    <div id="panel-resumen" class="dash-panel">
+      <div class="page-header"><div class="page-title"><span>Bienvenida</span>Hola, María</div></div>
+      <div class="dash-card mb-3" style="overflow:hidden">
+        <div style="position:relative;height:180px">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=75" style="width:100%;height:100%;object-fit:cover"/>
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(28,28,26,.8),rgba(28,28,26,.2));display:flex;align-items:center;padding:2rem 2.5rem">
+            <div>
+              <p style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem">Tu Proyecto</p>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--cream);font-weight:300">Casa Residencial Pedregal</h2>
+              <p style="font-size:.85rem;color:rgba(245,240,232,.7);margin-top:.3rem">Diseño + Construcción · Iniciado Marzo 2025</p>
+            </div>
+            <div style="margin-left:auto"><span class="badge-custom badge-active" style="background:rgba(107,124,94,.9)">Activo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi-card"><div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="kpi-value" data-target="72" data-suffix="%">0</div><div class="kpi-label">Avance de Obra</div><div class="kpi-change">Etapa: Estructura</div></div>
+        <div class="kpi-card"><div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div class="kpi-value" data-prefix="$" data-target="750000">0</div><div class="kpi-label">Total Pagado</div><div class="kpi-change">De $1,250,000</div></div>
+        <div class="kpi-card"><div class="kpi-icon" style="background:rgba(184,92,56,0.1)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="kpi-value" data-prefix="$" data-target="85000">0</div><div class="kpi-label">Saldo Pendiente</div><div class="kpi-change negative">Vence 15 jun</div></div>
+      </div>
+      <div class="dash-card mt-3">
+        <div class="dash-card-header"><h3 class="dash-card-title">Últimas Actualizaciones</h3></div>
+        <div class="dash-card-body" style="padding:1.75rem">
+          <div class="timeline">
+            <div class="timeline-item"><div class="timeline-dot filled"></div><div class="timeline-date">Hoy · Estructura · Nivel 1</div><div class="timeline-content"><strong>Colado de losa del primer nivel.</strong> Se realizó satisfactoriamente. El proyecto sigue en tiempo.</div></div>
+            <div class="timeline-item"><div class="timeline-dot filled"></div><div class="timeline-date">28 may 2025 · Estructura</div><div class="timeline-content"><strong>Habilitado de columnas.</strong> Se colocó acero en columnas de los ejes A-C. Situación menor de humedad atendida.</div></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">15 may 2025 · Cimentación</div><div class="timeline-content"><strong>Cimentación completada al 100%.</strong> Zapatas coladas y revisadas sin inconvenientes.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVANCE -->
+    <div id="panel-avance" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Seguimiento</span>Avance de Obra</div>
+      <div class="dash-card mb-3" style="padding:2rem">
+        <div class="flex justify-between items-center mb-3"><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">Casa Residencial Pedregal</h4><span class="badge-custom badge-active">72% Completado</span></div>
+        <div class="progress-custom mb-1" style="height:8px"><div class="progress-bar-custom" style="width:72%"></div></div>
+        <p style="font-size:.78rem;color:var(--stone)">Etapa actual: <strong style="color:var(--charcoal)">Estructura</strong></p>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-header"><h3 class="dash-card-title">Desglose por Etapas</h3></div>
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Etapa</th><th>Avance</th><th>Inicio</th><th>Fin Estimado</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td><strong>1. Preliminares</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:100%"></div></div><small>100%</small></div></td><td>Mar 2025</td><td>Mar 2025</td><td><span class="badge-custom badge-complete">Completado</span></td></tr>
+              <tr><td><strong>2. Cimentación</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:100%"></div></div><small>100%</small></div></td><td>Mar 2025</td><td>Abr 2025</td><td><span class="badge-custom badge-complete">Completado</span></td></tr>
+              <tr><td><strong>3. Estructura</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:60%"></div></div><small>60%</small></div></td><td>Abr 2025</td><td>Jul 2025</td><td><span class="badge-custom badge-active">En curso</span></td></tr>
+              <tr><td><strong>4. Albañilería</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:0%"></div></div><small>0%</small></div></td><td>Jul 2025</td><td>Sep 2025</td><td><span class="badge-custom badge-complete">Pendiente</span></td></tr>
+              <tr><td><strong>5. Instalaciones</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:0%"></div></div><small>0%</small></div></td><td>Sep 2025</td><td>Nov 2025</td><td><span class="badge-custom badge-complete">Pendiente</span></td></tr>
+              <tr><td><strong>6. Acabados</strong></td><td><div class="flex items-center g-2"><div class="progress-custom" style="width:80px"><div class="progress-bar-custom" style="width:0%"></div></div><small>0%</small></div></td><td>Nov 2025</td><td>Feb 2026</td><td><span class="badge-custom badge-complete">Pendiente</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- COTIZACIÓN -->
+    <div id="panel-cotizacion" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Contrato</span>Mi Cotización</div>
+      <div class="dash-card mb-3" style="padding:1.75rem"><div class="flex justify-between items-center mb-1"><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem">Cotización COT-2025-001</h4><span class="badge-custom badge-active">Aprobada</span></div><p style="font-size:.82rem;color:var(--stone)">Casa Residencial Pedregal · Emitida el 15 de marzo de 2025</p></div>
+      <div class="dash-card">
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Concepto</th><th>Descripción</th><th>Monto</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Diseño arquitectónico</strong></td><td>Anteproyecto, planos y renders 3D</td><td>$120,000</td></tr>
+              <tr><td><strong>Proyecto ejecutivo</strong></td><td>Planos estructurales e instalaciones</td><td>$95,000</td></tr>
+              <tr><td><strong>Trámites y permisos</strong></td><td>Licencia de construcción municipal</td><td>$35,000</td></tr>
+              <tr><td><strong>Supervisión de obra</strong></td><td>Visitas semanales durante la obra</td><td>$200,000</td></tr>
+              <tr><td><strong>Construcción general</strong></td><td>Mano de obra y materiales</td><td>$750,000</td></tr>
+              <tr><td><strong>Acabados e interiores</strong></td><td>Pisos, pintura, baños y cocina</td><td>$50,000</td></tr>
+              <tr style="background:rgba(201,168,76,.05)"><td colspan="2"><strong>TOTAL APROBADO</strong></td><td><strong style="font-size:1.1rem;color:var(--charcoal)">$1,250,000</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGOS -->
+    <div id="panel-pagos-cliente" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Finanzas</span>Mis Pagos</div>
+      <div class="row g-3 mb-3">
+        <div class="col-md-4"><div class="dash-card" style="padding:1.5rem;text-align:center"><p class="kpi-label mb-1">Monto Total del Contrato</p><p style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--charcoal)">$1,250,000</p></div></div>
+        <div class="col-md-4"><div class="dash-card" style="padding:1.5rem;text-align:center"><p class="kpi-label mb-1">Total Pagado</p><p style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--sage)">$750,000</p></div></div>
+        <div class="col-md-4"><div class="dash-card" style="padding:1.5rem;text-align:center"><p class="kpi-label mb-1">Saldo Pendiente</p><p style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--terracotta)">$500,000</p></div></div>
+      </div>
+      <div class="alert-custom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Tienes un pago pendiente de <strong>$85,000</strong> con vencimiento el <strong>15 de junio de 2025</strong>.</div>
+      <div class="dash-card">
+        <div class="dash-card-header"><h3 class="dash-card-title">Historial de Pagos</h3></div>
+        <div class="dash-card-body">
+          <table class="custom-table">
+            <thead><tr><th>Fecha</th><th>Concepto</th><th>Monto</th><th>Método</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>15 mar 2025</td><td>Anticipo inicial (20%)</td><td class="text-gold"><strong>$250,000</strong></td><td>Transferencia</td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>10 abr 2025</td><td>Estimación 1 — Preliminares</td><td class="text-gold"><strong>$200,000</strong></td><td>Cheque</td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>15 may 2025</td><td>Estimación 2 — Cimentación</td><td class="text-gold"><strong>$200,000</strong></td><td>Transferencia</td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>01 jun 2025</td><td>Estimación 2B — Estructura</td><td class="text-gold"><strong>$100,000</strong></td><td>Transferencia</td><td><span class="badge-custom badge-active">Pagado</span></td></tr>
+              <tr><td>15 jun 2025</td><td>Anticipo 30% — Estructura</td><td class="text-gold"><strong>$85,000</strong></td><td>—</td><td><span class="badge-custom badge-pending">Pendiente</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTIFICACIONES -->
+    <div id="panel-notificaciones" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Avisos</span>Notificaciones</div>
+      <div class="dash-card">
+        <div class="dash-card-body" style="padding:0">
+          <div style="padding:1.5rem 2rem;border-bottom:1px solid var(--border);background:rgba(201,168,76,.04)"><div class="flex justify-between items-center mb-1"><strong style="font-size:.9rem">Colado de losa nivel 1 completado</strong><small class="text-stone">Hoy</small></div><p style="font-size:.84rem;color:var(--stone)">El Arq. Carlos Reyes registró avance en la etapa de estructura. Tu proyecto avanza al 72%.</p></div>
+          <div style="padding:1.5rem 2rem;border-bottom:1px solid var(--border);background:rgba(184,92,56,.03)"><div class="flex justify-between items-center mb-1"><strong style="font-size:.9rem">⚠️ Pago próximo a vencer</strong><small class="text-stone">28 may</small></div><p style="font-size:.84rem;color:var(--stone)">Tienes un pago de $85,000 con vencimiento el 15 de junio. Por favor contáctanos.</p></div>
+          <div style="padding:1.5rem 2rem"><div class="flex justify-between items-center mb-1"><strong style="font-size:.9rem">Cimentación terminada</strong><small class="text-stone">15 may</small></div><p style="font-size:.84rem;color:var(--stone)">La etapa de cimentación se completó al 100%. El proyecto continúa en tiempo.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div id="panel-contacto" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Comunicación</span>Contactar al Despacho</div>
+      <div class="row g-3">
+        <div class="col-md-7">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3 class="dash-card-title">Enviar Mensaje</h3></div>
+            <div class="dash-card-body" style="padding:2rem">
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Asunto</label><input class="dash-form-control" placeholder="Ej. Duda sobre la estimación 3"/></div>
+              <div class="dash-form-group mb-3"><label class="dash-form-label">Mensaje</label><textarea class="dash-form-control" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea></div>
+              <button class="btn-dash-primary" onclick="showToast('Mensaje enviado al despacho')">Enviar Mensaje</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="dash-card" style="padding:2rem">
+            <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:1.5rem">Contacto Directo</h4>
+            <div style="font-size:.88rem;line-height:2.3;color:var(--stone)">
+              <p>🏛️ <strong style="color:var(--charcoal)">Arq Studio</strong></p>
+              <p>👤 <strong style="color:var(--charcoal)">Arq. Carlos Reyes</strong></p>
+              <p>📱 (81) 2222-3333</p>
+              <p>📧 c.reyes@arqstudio.mx</p>
+              <div class="divider"></div>
+              <p>🏢 Oficina: (81) 1234-5678</p>
+              <p>🕘 Lun–Vie 9:00–18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERFIL CLIENTE -->
+    <div id="panel-perfil-cli" class="dash-panel" style="display:none">
+      <div class="page-title mb-3" style="margin-bottom:1.5rem!important"><span>Cuenta</span>Mi Perfil</div>
+      <div class="row g-3">
+        <div class="col-md-4"><div class="dash-card" style="padding:2rem;text-align:center"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--terracotta));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--charcoal)">M</div><h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem">María González</h4><p style="font-size:.72rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase">Cliente</p></div></div>
+        <div class="col-md-8"><div class="dash-card"><div class="dash-card-header"><h3 class="dash-card-title">Mis Datos</h3></div><div class="dash-card-body" style="padding:2rem"><div class="form-row cols-2 mb-3"><div class="dash-form-group"><label class="dash-form-label">Nombre</label><input class="dash-form-control" value="María González"/></div><div class="dash-form-group"><label class="dash-form-label">Teléfono</label><input class="dash-form-control" value="(81) 1111-2222"/></div></div><div class="dash-form-group mb-3"><label class="dash-form-label">Email</label><input class="dash-form-control" value="maria@email.com"/></div><div class="dash-form-group mb-3"><label class="dash-form-label">Dirección</label><input class="dash-form-control" value="San Pedro Garza García, N.L."/></div><button class="btn-dash-primary" onclick="showToast('Perfil actualizado')">Guardar Cambios</button></div></div></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
